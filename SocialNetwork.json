@@ -2,10 +2,10 @@
 	"name": "Social Network",
 	"architecturesView":["SC","MC"],
 	"lVariables": [{
-		"varName": "porcentaje1",
+		"varName": "percentage1",
 		"values": [0.86]
 	}, {
-		"varName": "porcentaje2",
+		"varName": "percentage2",
 		"values": [0.14]
 	}, {
 		"varName": "faccess2",
@@ -17,7 +17,7 @@
 		"varName": "faccess",
 		"values": [1.73]
 	},{
-		"varName": "nContactos",
+		"varName": "nContacts",
 		"values": [20,40,80,130]
 	}],
 	"lArchitectures": [{
@@ -27,14 +27,14 @@
 				"usedVar": ["fpost"],
 				"lPrimitives": [{
 					"type": "post",
-					"usedVar": ["porcentaje1"],
+					"usedVar": ["percentage1"],
 					"lOperations": [{
 						"size": 140,
 						"usedVar": []
 					}]
 				}, {
 					"type": "post",
-					"usedVar": ["porcentaje2"],
+					"usedVar": ["percentage2"],
 					"lOperations": [{
 						"size": 300000,
 						"usedVar": []
@@ -49,10 +49,10 @@
 					"usedVar": [],
 					"lOperations": [{
 						"size": 140,
-						"usedVar": ["porcentaje1","nContactos","fpost","faccess"]
+						"usedVar": ["percentage1","nContacts","fpost","faccess"]
 					},{
 						"size": 300000,
-						"usedVar": ["porcentaje2","nContactos","fpost","faccess"]
+						"usedVar": ["percentage2","nContacts","fpost","faccess"]
 					}]
 
 				}]
@@ -65,14 +65,14 @@
 				"usedVar": ["fpost"],
 				"lPrimitives": [{
 					"type": "store",
-					"usedVar": ["porcentaje1"],
+					"usedVar": ["percentage1"],
 					"lOperations": [{
 						"size": 140,
 						"usedVar": []
 					}]
 				}, {
 					"type": "store",
-					"usedVar": ["porcentaje2"],
+					"usedVar": ["percentage2"],
 					"lOperations": [{
 						"size": 300000,
 						"usedVar": []
@@ -84,13 +84,13 @@
 				"usedVar": ["faccess2"],
 				"lPrimitives": [{
 					"type": "get",
-					"usedVar": ["nContactos"],
+					"usedVar": ["nContacts"],
 					"lOperations": [{
 						"size": 140,
-						"usedVar": ["porcentaje1","fpost","faccess"]
+						"usedVar": ["percentage1","fpost","faccess"]
 					},{
 						"size": 300000,
-						"usedVar": ["porcentaje2","fpost","faccess"]
+						"usedVar": ["percentage2","fpost","faccess"]
 					}]
 				}]
 			}]
