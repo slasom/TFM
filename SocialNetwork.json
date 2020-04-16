@@ -1,0 +1,99 @@
+{
+	"name": "Social Network",
+	"architecturesView":["SC","MC"],
+	"lVariables": [{
+		"varName": "porcentaje1",
+		"values": [0.86]
+	}, {
+		"varName": "porcentaje2",
+		"values": [0.14]
+	}, {
+		"varName": "faccess2",
+		"values": [0.58]
+	}, {
+		"varName": "fpost",
+		"values": [0.07]
+	},{
+		"varName": "faccess",
+		"values": [1.73]
+	},{
+		"varName": "nContactos",
+		"values": [20,40,80,130]
+	}],
+	"lArchitectures": [{
+			"arName": "SC",
+			"useCases": [{
+				"ucName": "Posting Personal Information",
+				"usedVar": ["fpost"],
+				"lPrimitives": [{
+					"type": "post",
+					"usedVar": ["porcentaje1"],
+					"lOperations": [{
+						"size": 140,
+						"usedVar": []
+					}]
+				}, {
+					"type": "post",
+					"usedVar": ["porcentaje2"],
+					"lOperations": [{
+						"size": 300000,
+						"usedVar": []
+					}]
+
+				}]
+			}, {
+				"ucName": "Getting the content posted by contacts",
+				"usedVar": ["faccess2"],
+				"lPrimitives": [{
+					"type": "get",
+					"usedVar": [],
+					"lOperations": [{
+						"size": 140,
+						"usedVar": ["porcentaje1","nContactos","fpost","faccess"]
+					},{
+						"size": 300000,
+						"usedVar": ["porcentaje2","nContactos","fpost","faccess"]
+					}]
+
+				}]
+			}]
+		},
+		{
+			"arName": "MC",
+			"useCases": [{
+				"ucName": "Posting Personal Information",
+				"usedVar": ["fpost"],
+				"lPrimitives": [{
+					"type": "store",
+					"usedVar": ["porcentaje1"],
+					"lOperations": [{
+						"size": 140,
+						"usedVar": []
+					}]
+				}, {
+					"type": "store",
+					"usedVar": ["porcentaje2"],
+					"lOperations": [{
+						"size": 300000,
+						"usedVar": []
+					}]
+
+				}]
+			}, {
+				"ucName": "Getting the content posted by contacts",
+				"usedVar": ["faccess2"],
+				"lPrimitives": [{
+					"type": "get",
+					"usedVar": ["nContactos"],
+					"lOperations": [{
+						"size": 140,
+						"usedVar": ["porcentaje1","fpost","faccess"]
+					},{
+						"size": 300000,
+						"usedVar": ["porcentaje2","fpost","faccess"]
+					}]
+				}]
+			}]
+		}
+	]
+}
