@@ -32,7 +32,7 @@ paths:
     get:
       tags:
         - User
-      summary: Gets users within an area
+      summary: Gets users preferences within an area
       description: Obtain user prefernces within a geographical area
       operationId: getUsers
       parameters:
