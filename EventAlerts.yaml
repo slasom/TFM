@@ -31,7 +31,7 @@ paths:
   /users:
     get:
       tags:
-        - Location
+        - User
       summary: Gets users within an area
       description: Obtain user prefernces within a geographical area
       operationId: getUsers
