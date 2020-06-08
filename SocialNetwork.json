@@ -18,7 +18,7 @@
 		"values": [1.73]
 	},{
 		"varName": "nContacts",
-		"values": [20,40,80,130]
+		"values": [2,30,65,95,130]
 	}],
 	"lArchitectures": [{
 			"arName": "SC",
