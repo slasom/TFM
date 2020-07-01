@@ -12,12 +12,13 @@ info:
 tags:
   - name: Map
 paths:
-  /ms2/heatmaps:
+  
+  /ms1/heatmaps:
     get:
       tags:
         - Map
-      summary: Get the locations frequency processed in the aggregator
-      operationId: getMS2Heatmaps
+      summary: Get the locations frequency processed in the different connected devices.
+      operationId: getMS1Heatmaps
       parameters:
         - name: beginDate
           in: query
@@ -82,12 +83,13 @@ paths:
           $ref: '#/components/responses/204'
         '404':
           $ref: '#/components/responses/404'
-  /ms1/heatmaps:
+          
+  /ms2/heatmaps:
     get:
       tags:
         - Map
-      summary: Get the locations frequency processed in the different connected devices.
-      operationId: getMS1Heatmaps
+      summary: Get the locations frequency processed in the aggregator
+      operationId: getMS2Heatmaps
       parameters:
         - name: beginDate
           in: query
